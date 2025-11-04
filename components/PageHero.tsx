@@ -18,11 +18,11 @@ export default function PageHero({ title, description, className }: PageHeroProp
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             {title}
           </h1>
           {description && (
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl">
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
               {description}
             </p>
           )}

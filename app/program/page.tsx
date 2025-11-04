@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Clock, Coffee, Presentation, Users, FileText, Award } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -34,8 +34,7 @@ export default function Program() {
 
   return (
     <div className="relative">
-      <GridOverlay />
-      <PageHero title="Program" description="Workshop schedule and sessions for SynIRgy 2026" />
+      <PageBanner title="Program" description="Workshop schedule and sessions for SynIRgy 2026" />
       <section className="relative py-24">
         <div className="container relative z-10">
           <SectionHeading subtitle="Detailed program will be announced closer to the workshop date">

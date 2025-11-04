@@ -1,7 +1,7 @@
 'use client'
 
 import { FileText, Award } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -10,8 +10,7 @@ import Link from 'next/link'
 export default function AcceptedPapers() {
   return (
     <div className="relative">
-      <GridOverlay />
-      <PageHero title="Accepted Papers" description="List of accepted papers for SynIRgy Workshop 2026" />
+      <PageBanner title="Accepted Papers" description="List of accepted papers for SynIRgy Workshop 2026" />
       <section className="relative py-24">
         <div className="container relative z-10">
           <SectionHeading subtitle="Papers will be announced after the review process is complete">

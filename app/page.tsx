@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion'
 import { Calendar, MapPin, FileText, Users, Target, Presentation } from 'lucide-react'
+import Image from 'next/image'
 import GridOverlay from '@/components/GridOverlay'
 import AnimatedCard from '@/components/AnimatedCard'
 import { Button } from '@/components/ui/button'
@@ -24,11 +25,25 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {/* Simple static grid background only */}
-      <GridOverlay />
 
-      {/* Hero Section */}
+      {/* Hero Section with Banner */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/banner-synirgy.png"
+            alt="SynIRgy Workshop Banner"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          {/* Dark Overlay for Text Contrast */}
+          <div className="absolute inset-0 bg-black/60" />
+          {/* Gradient Fade to White at Bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
+        </div>
+
         <div className="container relative z-10 py-20">
           <motion.div
             initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -47,16 +62,16 @@ export default function Home() {
                 </Badge>
               </motion.div>
 
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white">
                 SynIRgy
               </h1>
 
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
                 Simulation and Synthetic Data for Information Retrieval
               </h2>
             </div>
 
-            <p className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Bringing together researchers and practitioners to explore innovative evaluation
               methods, synergies, and best practices in simulation and synthetic data for IR
             </p>
@@ -67,13 +82,13 @@ export default function Home() {
               transition={{ delay: shouldReduceMotion ? 0 : 0.4, duration: shouldReduceMotion ? 0 : 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
             >
-              <div className="flex items-center gap-2 text-foreground font-semibold text-lg">
-                <Calendar className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-2 text-white font-semibold text-lg">
+                <Calendar className="h-6 w-6 text-blue-400" />
                 <span>Date: TBA</span>
               </div>
-              <div className="hidden sm:block text-primary font-bold">•</div>
-              <div className="flex items-center gap-2 text-foreground font-semibold text-lg">
-                <MapPin className="h-6 w-6 text-primary" />
+              <div className="hidden sm:block text-blue-400 font-bold">•</div>
+              <div className="flex items-center gap-2 text-white font-semibold text-lg">
+                <MapPin className="h-6 w-6 text-blue-400" />
                 <span>Location: TBA</span>
               </div>
             </motion.div>

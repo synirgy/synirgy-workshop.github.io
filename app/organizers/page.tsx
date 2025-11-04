@@ -1,7 +1,7 @@
 'use client'
 
 import { User, Mail, Users } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -17,8 +17,7 @@ export default function Organizers() {
 
   return (
     <div className="relative">
-      <GridOverlay />
-      <PageHero title="Organizers" description="Workshop chairs and program committee members" />
+      <PageBanner title="Organizers" description="Workshop chairs and program committee members" />
       <section className="relative py-24">
         <div className="container relative z-10">
           <SectionHeading>Workshop Chairs</SectionHeading>

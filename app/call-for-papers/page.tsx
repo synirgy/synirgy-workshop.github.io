@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FileText, Users, Target, CheckCircle, BookOpen, Lightbulb, Database, Brain, Globe, Zap } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -86,9 +86,7 @@ export default function CallForPapers() {
 
   return (
     <div className="relative">
-      <GridOverlay />
-
-      <PageHero
+      <PageBanner
         title="Call for Papers"
         description="Submit your research on simulation and synthetic data for Information Retrieval"
       />

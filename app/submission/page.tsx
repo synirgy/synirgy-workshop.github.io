@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FileEdit, FileCheck, Upload, Search, Presentation, AlertCircle } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -20,8 +20,7 @@ export default function Submission() {
 
   return (
     <div className="relative">
-      <GridOverlay />
-      <PageHero title="Submission Guidelines" description="How to prepare and submit your paper to SynIRgy Workshop" />
+      <PageBanner title="Submission Guidelines" description="How to prepare and submit your paper to SynIRgy Workshop" />
       <section className="relative py-24">
         <div className="container relative z-10">
           <SectionHeading>Submission Process</SectionHeading>

@@ -1,7 +1,7 @@
 'use client'
 
 import { MapPin, Mail, Plane, Train, Hotel, ExternalLink } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -10,8 +10,7 @@ import Link from 'next/link'
 export default function Venue() {
   return (
     <div className="relative">
-      <GridOverlay />
-      <PageHero title="Venue & Contact" description="Location details and how to reach the SynIRgy Workshop" />
+      <PageBanner title="Venue & Contact" description="Location details and how to reach the SynIRgy Workshop" />
       <section className="relative py-24">
         <div className="container relative z-10">
           <SectionHeading>Workshop Venue</SectionHeading>

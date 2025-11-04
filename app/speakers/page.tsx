@@ -1,7 +1,7 @@
 'use client'
 
 import { User } from 'lucide-react'
-import PageHero from '@/components/PageHero'
+import PageBanner from '@/components/PageBanner'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
@@ -14,8 +14,7 @@ export default function Speakers() {
 
   return (
     <div className="relative">
-      <GridOverlay />
-      <PageHero title="Keynote Speakers" description="Distinguished speakers sharing insights on simulation and synthetic data for IR" />
+      <PageBanner title="Keynote Speakers" description="Distinguished speakers sharing insights on simulation and synthetic data for IR" />
       <section className="relative py-24">
         <div className="container relative z-10">
           <SectionHeading subtitle="Details will be updated as speakers are confirmed">
