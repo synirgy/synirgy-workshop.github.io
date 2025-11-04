@@ -8,6 +8,8 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
+    loader: 'custom',
+    loaderFile: './lib/imageLoader.ts',
   },
   basePath: process.env.NODE_ENV === 'production' ? repoName : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? repoName : '',
