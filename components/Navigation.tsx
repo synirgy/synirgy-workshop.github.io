@@ -26,11 +26,11 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b-2 border-border bg-background shadow-sm">
       <div className="container flex h-16 items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 mr-8">
-          <Network className="h-6 w-6 text-primary" />
+        <Link href="/" className="flex items-center space-x-2 mr-8 hover:opacity-80 transition-opacity">
+          <Network className="h-7 w-7 text-primary" />
           <span className="font-bold text-xl hidden md:inline-block">
             SynIRgy Workshop
           </span>
@@ -46,17 +46,17 @@ const Navigation = () => {
               key={item.href}
               href={item.href}
               className={cn(
-                "px-3 py-2 text-sm font-medium transition-colors hover:text-primary relative group",
+                "px-3 py-2 text-base font-medium transition-colors hover:text-primary relative group",
                 pathname === item.href
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                  ? "text-primary font-bold"
+                  : "text-foreground"
               )}
             >
               {item.label}
               {pathname === item.href && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary" />
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-primary" />
               )}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary/50 group-hover:w-full transition-all duration-300" />
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-primary group-hover:w-full transition-all duration-200" />
             </Link>
           ))}
         </div>
@@ -67,34 +67,34 @@ const Navigation = () => {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Toggle menu">
                 {isOpen ? (
-                  <X className="h-5 w-5" />
+                  <X className="h-6 w-6" />
                 ) : (
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-6 w-6" />
                 )}
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l-2 border-border">
               <div className="flex flex-col space-y-4 mt-8">
                 <div className="flex items-center space-x-2 mb-4">
-                  <Network className="h-6 w-6 text-primary" />
+                  <Network className="h-7 w-7 text-primary" />
                   <span className="font-bold text-xl">SynIRgy Workshop</span>
                 </div>
-                <Separator />
+                <Separator className="bg-border h-0.5" />
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "flex items-center px-4 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground rounded-md",
+                      "flex items-center px-4 py-3 text-base font-medium transition-colors rounded-md border-2",
                       pathname === item.href
-                        ? "bg-accent text-accent-foreground"
-                        : "text-muted-foreground"
+                        ? "bg-primary text-primary-foreground border-primary font-bold"
+                        : "text-foreground border-border hover:border-primary"
                     )}
                   >
                     {item.label}
                     {pathname === item.href && (
-                      <span className="ml-auto h-2 w-2 rounded-full bg-primary" />
+                      <span className="ml-auto h-3 w-3 rounded-full bg-white" />
                     )}
                   </Link>
                 ))}

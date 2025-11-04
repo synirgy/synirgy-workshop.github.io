@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
@@ -21,16 +21,27 @@ export default function AnimatedCard({
   delay = 0,
   hover3d = true,
 }: AnimatedCardProps) {
+  const shouldReduceMotion = useReducedMotion()
+
+  // Minimal animations that respect user preferences
+  const hoverAnimation = shouldReduceMotion
+    ? undefined
+    : (hover3d ? { y: -3 } : undefined)
+
+  const initialAnimation = shouldReduceMotion
+    ? { opacity: 1, y: 0 }
+    : { opacity: 0, y: 20 }
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={initialAnimation}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={hover3d ? { y: -5, scale: 1.02 } : undefined}
+      transition={{ duration: shouldReduceMotion ? 0 : 0.4, delay: shouldReduceMotion ? 0 : delay }}
+      whileHover={hoverAnimation}
       className={cn("h-full", className)}
     >
-      <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+      <Card className="h-full border-2 border-border bg-card hover:border-primary transition-colors duration-200">
         {(title || description) && (
           <CardHeader>
             {title && <CardTitle className="text-2xl">{title}</CardTitle>}

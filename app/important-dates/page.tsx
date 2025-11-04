@@ -5,7 +5,6 @@ import { Calendar, Bell, FileCheck, Award, Users } from 'lucide-react'
 import PageHero from '@/components/PageHero'
 import SectionHeading from '@/components/SectionHeading'
 import GridOverlay from '@/components/GridOverlay'
-import ParticleBackground from '@/components/ParticleBackground'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
@@ -51,7 +50,6 @@ export default function ImportantDates() {
   return (
     <div className="relative">
       <GridOverlay />
-      <ParticleBackground />
 
       <PageHero
         title="Important Dates"

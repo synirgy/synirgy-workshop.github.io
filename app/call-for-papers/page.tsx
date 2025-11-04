@@ -6,7 +6,6 @@ import PageHero from '@/components/PageHero'
 import SectionHeading from '@/components/SectionHeading'
 import AnimatedCard from '@/components/AnimatedCard'
 import GridOverlay from '@/components/GridOverlay'
-import ParticleBackground from '@/components/ParticleBackground'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
@@ -88,7 +87,6 @@ export default function CallForPapers() {
   return (
     <div className="relative">
       <GridOverlay />
-      <ParticleBackground />
 
       <PageHero
         title="Call for Papers"
