@@ -66,18 +66,7 @@ export default function Organizers() {
   ]
 
   const pc = [
-    'Krisztian Balog, University of Stavanger, Norway',
-    'Nolwenn Bernard, University of Stavanger, Norway',
-    'Ivan Cantador, Universidad Autónoma de Madrid, Spain',
-    'Masoud Mansoury, TU Delft, The Netherlands',
-    'Savvina Danil, Centrum Wiskunde & Informatica, The Netherlands',
-    'Linus Dietz, King\'s College London, United Kingdom',
-    'Marcel Hauck, Mainz University of Applied Sciences, Germany',
-    'Sole Pera, TU Delft, The Netherlands',
-    'Roger Zhe Li, Huawei Ireland Research Center, Ireland',
-    'Nynke Krol, Official Statistics, The Netherlands',
-    'Laurens Naudts, Institute for Information Law, University of Amsterdam',
-    'Max van Drunen, Institute for Information Law, University of Amsterdam'
+    'TBA'
   ]
 
   return (
@@ -172,15 +161,7 @@ export default function Organizers() {
         <div className="container relative z-10">
           <SectionHeading>Program Committee</SectionHeading>
           <AnimatedCard>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {pc.map((member, index) => (
-                <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                  <Users className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span>{member}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-muted-foreground italic mt-6">More PC members to be announced...</p>
+            <p className="text-muted-foreground italic text-center">Program Committee members to be announced...</p>
           </AnimatedCard>
         </div>
       </section>
