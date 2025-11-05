@@ -73,11 +73,12 @@ export default function CallForPapers() {
 
   const guidelines = [
     "Submissions must be written in English",
-    "Follow the CEUR Workshop Proceedings format",
+    "Follow the Springer LNCS format",
     "Submit in PDF format via the workshop submission system",
     "All papers undergo double-blind peer review by at least two independent reviewers",
     "Page limits exclude references",
     "At least one author of each accepted paper must register for ECIR 2026 and the workshop",
+    "Each accepted paper must be presented by at least one of its authors at the workshop",
     "Full experiments are not required for position papers, but preliminary results are encouraged"
   ]
 
@@ -174,7 +175,7 @@ export default function CallForPapers() {
           <div className="mt-8 p-6 rounded-lg border border-border bg-card">
             <p className="text-sm text-muted-foreground">
               <strong>Note:</strong> Page limits exclude references. All submissions should follow the
-              CEUR Workshop Proceedings format.
+              Springer LNCS format.
             </p>
           </div>
         </div>
@@ -213,7 +214,7 @@ export default function CallForPapers() {
                 <li>• <strong>Quality:</strong> Well-structured arguments, clear communication, and appropriate use of language</li>
               </ul>
               <p className="text-muted-foreground mt-4">
-                All accepted contributions will be published in CEUR-WS workshop proceedings. Based on interest and 
+                All accepted contributions will be published in Springer LNCS proceedings. Based on interest and
                 paper quality, we may organize a follow-up special issue in a relevant journal.
               </p>
             </div>

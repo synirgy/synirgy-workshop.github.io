@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export default function Submission() {
   const steps = [
-    { number: 1, title: 'Prepare Your Paper', description: 'Write your paper following CEUR format guidelines', icon: FileEdit },
+    { number: 1, title: 'Prepare Your Paper', description: 'Write your paper following Springer LNCS format guidelines', icon: FileEdit },
     { number: 2, title: 'Format & Review', description: 'Ensure formatting requirements and page limits are met', icon: FileCheck },
     { number: 3, title: 'Submit via System', description: 'Upload PDF through the workshop submission portal (double-blind)', icon: Upload },
     { number: 4, title: 'Double-Blind Review', description: 'Papers reviewed by at least two independent expert reviewers', icon: Search },
@@ -60,7 +60,7 @@ export default function Submission() {
           <SectionHeading>Formatting Requirements</SectionHeading>
           <AnimatedCard>
             <ul className="space-y-3 text-muted-foreground">
-              <li>• All submissions must follow the CEUR Workshop Proceedings format</li>
+              <li>• All submissions must follow the Springer LNCS format</li>
               <li>• Full research papers: 12 pages (excluding references)</li>
               <li>• Short papers & work-in-progress: 4-6 pages (excluding references)</li>
               <li>• Demo papers: 5 pages (excluding references)</li>
@@ -69,6 +69,7 @@ export default function Submission() {
               <li>• Papers must be submitted in PDF format</li>
               <li>• All submissions must be in English and anonymized for double-blind review</li>
               <li>• At least one author of accepted papers must register for ECIR 2026 and the workshop</li>
+              <li>• Each accepted paper must be presented by at least one of its authors at the workshop</li>
             </ul>
           </AnimatedCard>
           <div className="mt-8 p-6 rounded-xl border border-primary bg-primary/5">
