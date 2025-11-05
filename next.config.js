@@ -2,8 +2,8 @@
 // Update this to match your GitHub repository name
 // For root domain sites (username.github.io or orgname.github.io), set to ''
 // For project sites (username.github.io/repo-name), set to '/repo-name'
-// This site deploys to: https://synirgy.github.io/synirgy-workshop.github.io/
-const repoName = '/synirgy-workshop.github.io'
+// This site deploys to: https://synirgy-workshop.github.io/
+const repoName = ''
 
 const nextConfig = {
   output: 'export',

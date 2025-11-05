@@ -47,7 +47,9 @@ export default function Home() {
             <div className="space-y-4">
               <div>
                 <Badge variant="default" className="text-base px-6 py-2 mb-6 bg-primary text-primary-foreground border border-primary font-bold">
-                  ECIR 2026 Workshop
+                  <Link href="https://ecir2026.eu/" target="_blank" rel="noopener noreferrer">
+                    ECIR 2026 Workshop
+                  </Link>
                 </Badge>
               </div>
 
@@ -73,7 +75,7 @@ export default function Home() {
               <div className="hidden sm:block text-blue-400 font-bold">•</div>
               <div className="flex items-center gap-2 text-white font-semibold text-lg">
                 <MapPin className="h-6 w-6 text-blue-400" />
-                <span>Location: TBA</span>
+                <span>Location: Delft, Netherlands (ECIR 2026)</span>
               </div>
             </div>
 

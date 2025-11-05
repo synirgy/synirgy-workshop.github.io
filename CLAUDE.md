@@ -24,19 +24,19 @@ npm run lint         # Run ESLint
 
 ### Critical Configuration
 
-The site is configured for GitHub Pages with a repository subdirectory deployment. The `basePath` and `assetPrefix` in `next.config.js` MUST match the repository name:
+The site is configured for GitHub Pages with a root domain deployment. Since the repository is named `synirgy-workshop.github.io`, it deploys to the organization's root domain. The `basePath` and `assetPrefix` in `next.config.js` are set to empty strings:
 
 ```javascript
-const repoName = '/synirgy-website'  // Update this if repo name changes
+const repoName = ''  // Empty for root domain (orgname.github.io)
 ```
 
-**Important**: If deploying to a root domain (e.g., `username.github.io`), set `repoName` to an empty string `''`.
+**Important**: This configuration is for root domain sites (e.g., `orgname.github.io`). For project subdirectories, set `repoName` to `'/repo-name'`.
 
 ### Deployment Process
 
 1. **Automatic**: Push to `main` branch triggers `.github/workflows/deploy.yml`
 2. **Manual**: Trigger workflow from Actions tab
-3. Site deploys to: `https://username.github.io/synirgy-website/`
+3. Site deploys to: `https://synirgy-workshop.github.io/`
 
 ### Troubleshooting Deployment
 

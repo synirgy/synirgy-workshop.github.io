@@ -6,9 +6,11 @@
    - Go to Settings → Pages
    - Under "Source", select "GitHub Actions"
 
-2. **Update repository name in `next.config.js`:**
-   - If your repository is NOT named `synirgy-website`, update the `basePath` and `assetPrefix` values
-   - For example, if your repo is `my-workshop`, change:
+2. **Repository configuration:**
+   - This repository (`synirgy-workshop.github.io`) deploys to the root domain
+   - The `basePath` and `assetPrefix` are set to empty strings `''` in `next.config.js`
+   - **Note:** Root domain repos (named `orgname.github.io` or `username.github.io`) always use empty basePath
+   - **For subdirectory repos:** If your repo is named differently (e.g., `my-workshop`), you need:
      ```js
      basePath: process.env.NODE_ENV === 'production' ? '/my-workshop' : '',
      assetPrefix: process.env.NODE_ENV === 'production' ? '/my-workshop' : '',
@@ -16,12 +18,12 @@
 
 3. **Push to main branch:**
    - The GitHub Actions workflow will automatically build and deploy your site
-   - The site will be available at: `https://yourusername.github.io/repository-name/`
+   - The site will be available at: `https://synirgy-workshop.github.io/`
 
 ## Important Notes
 
-- The `basePath` and `assetPrefix` MUST match your repository name for GitHub Pages
-- If your repository is in the root (not a subdirectory), set both to empty strings: `''`
+- **Root domain repos** (`orgname.github.io` or `username.github.io`): Set `basePath` and `assetPrefix` to `''`
+- **Subdirectory repos** (e.g., `orgname.github.io/repo-name`): Set both to `'/repo-name'`
 - The deployment workflow runs automatically on every push to `main`
 - You can manually trigger it from the Actions tab
 

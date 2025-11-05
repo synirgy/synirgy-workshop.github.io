@@ -28,8 +28,8 @@ This is a Next.js website built with TypeScript for hosting on GitHub Pages. The
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/synirgy-website.git
-cd synirgy-website
+git clone https://github.com/synirgy-workshop/synirgy-workshop.github.io.git
+cd synirgy-workshop.github.io
 ```
 
 2. Install dependencies:
@@ -70,7 +70,7 @@ The static files will be generated in the `out` directory.
 
 ### Important Note
 
-Make sure to update the `basePath` and `assetPrefix` in `next.config.js` to match your repository name. If your repository is named `synirgy-website`, the current configuration should work. If your repository has a different name, update these values accordingly.
+This repository is configured for root domain deployment at `https://synirgy-workshop.github.io/`. The `basePath` and `assetPrefix` in `next.config.js` are set to empty strings because the repository name follows the `orgname.github.io` pattern. For project subdirectory deployments, you would need to set these to match your repository name (e.g., `'/repo-name'`).
 
 ## Customization
 
@@ -90,7 +90,7 @@ The website uses CSS for styling. You can:
 ## Project Structure
 
 ```
-synirgy-website/
+synirgy-workshop.github.io/
 ├── app/                    # Next.js app directory
 │   ├── page.tsx           # Home page
 │   ├── layout.tsx         # Root layout

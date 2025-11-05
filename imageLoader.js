@@ -5,7 +5,7 @@
 export default function imageLoader({ src }) {
   // basePath for GitHub Pages - matches next.config.js
   // cSpell:ignore synirgy
-  const basePath = process.env.NODE_ENV === 'production' ? '/synirgy-workshop.github.io' : ''
+  const basePath = ''
 
   // Don't modify external URLs (CDN images, etc.)
   if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('//')) {
